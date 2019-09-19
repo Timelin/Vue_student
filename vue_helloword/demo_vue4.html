@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理 v-on 示例3</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <div v-on:mouseover="fun1" id="div">
+        <textarea v-on:mouseover="fun2($event)">
+            这是一个文本域
+        </textarea>
+    </div>
+</div>
+<script>
+
+    new Vue({
+        el:"#app",
+        methods:{
+            fun1:function (msg) {
+
+                alert("div");
+
+            },
+            fun2:function (event) {
+                alert("textarea");
+                event.stopPropagation();// 阻止冒泡,则阻住事件传播
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

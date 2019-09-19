@@ -1,0 +1,5 @@
+com\magelala\pojo\User.class
+com\magelala\service\IUserService.class
+com\magelala\dao\IUserDao.class
+com\magelala\controller\UserController.class
+com\magelala\service\impl\UserServiceImpl.class

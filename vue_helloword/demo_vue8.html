@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+
+
+<div id="app">
+
+    <font size="5" v-bind:color="ys1">马格啦啦</font>
+    <font size="5" :color="ys2">程序员</font>
+    <hr>
+    <a v-bind={href:"http://www.itcast.cn/index/"+id}>itcast</a>
+
+</div>
+
+<script >
+    new Vue({
+        el: '#app',
+        data:{
+            ys1 :"red",
+            ys2 :"green",
+            id :1
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理 v-on 示例1</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+
+<div id="app">
+    {{message}}
+    <button v-on:click="fun1('good')">点击改变</button>
+</div>
+<script>
+
+    new Vue({
+        el:"#app",
+        data:{
+
+            message:'hello word?'
+        },
+        methods:{
+            fun1:function (msg) {
+                this.message=msg;
+
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

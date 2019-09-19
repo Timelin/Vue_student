@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for示例2</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <table border="1">
+        <tr>
+            <td>序号</td>
+            <td>名称</td>
+            <td>价格</td>
+        </tr>
+        <tr v-for="p in products">
+            <td>{{p.id}}</td>
+            <td>{{p.pname}}</td>
+            <td>{{p.price}}</td>
+        </tr>
+    </table>
+</div>
+<script>
+    new Vue({
+        el : '#app',
+        data :{
+
+            list:[1,2,3,4,5,6],
+
+            products :[{
+                id : 1,
+                pname : "电视机",
+                price : 1000
+            },
+                {
+                    id : 2,
+                    pname : "电机",
+                    price : 2000
+                },
+                {
+                    id : 3,
+                    pname : "手机",
+                    price : 3000
+                }
+            ]
+        }
+    });
+</script>
+</body>
+</html>

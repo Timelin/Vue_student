@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-on 事件修饰符</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <form @submit.prevent action="http://www.magelala.com" method="get">
+        <input type="submit" value="提交"/>
+    </form>
+
+    <div @click="fun1">
+        <a @click.stop href="http://www.magelala.com">magelala</a>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el:"#app",
+
+        methods:{
+            fun1:function () {
+                alert("hello magelala");
+            }
+        }
+    });
+</script>
+</body>
+</html>
